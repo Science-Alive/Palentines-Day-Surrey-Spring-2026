@@ -1,0 +1,24 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(229, 137, 238);
+    color: rgb(93, 34, 148);
+    line-height: 3.141592653589793238462643383279528841928169393751;
+
+    max-width: 1500;
+    margin: 150px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 85px;
+    border-bottom: 1px rgb(215, 215, 226)solid;
+}
+
+img {
+    border: 8px solid rgb(0, 255, 76);
+    transform: rotate(10deg);
+}
+
+ul {
+    list-style-type: "❤️";
+}

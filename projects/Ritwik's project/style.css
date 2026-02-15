@@ -1,0 +1,33 @@
+body {   
+    font-family: 'Courier New', Courier, monospace;
+    background-color:greenyellow; color: ;
+    line-height: 1.99;
+
+max-width:800px;
+margin: 50px auto;
+text-align: center;
+
+
+}
+
+
+h1 {
+    font-size: 40px;
+border-bottom: 90px;
+}
+
+
+
+img {
+    border: 4px solid red;
+    transform: rotate(-10deg);
+
+}
+
+
+ul {    
+    list-style-type:"⚔️";
+
+
+
+}

@@ -1,0 +1,27 @@
+body {
+    font-family: cursive;
+    background-color: rgb(184, 10, 10);
+    color: rgb(102, 17, 31);
+    line-height: 1.2;
+    max-width: 1500px;
+    margin:50px auto; 
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+    border-bottom: 4px solid rgb(238, 10, 10);
+}
+
+h2{ 
+    font-size: 30px;
+}
+
+ img {
+     border: 9px solid rgb(231, 80, 110);
+     transform: rotate(-2deg);
+ }
+
+ ul {
+    list-style-type: "❤️";
+ }

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&display=swap');
+
+body {
+font-family:'Playwrite CU Guides', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color:#a32222d7;
+background-color: #dd5555d7;
+line-height:2;
+max-width:600px;
+margin: 50px auto;
+text-align:center;
+}
+h1 {
+    border-bottom: 10px dotted rgb(209, 69, 69);
+    font: size 40px;
+}
+img {
+    border: 8px dotted rgb(216, 87, 87);
+    transform: rotate(3deg);
+}
+
+#img1 {
+    transform: rotate(-3deg);
+}
+ul{
+    list-style-type: "🐱";
+}

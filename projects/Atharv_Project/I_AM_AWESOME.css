@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+body {
+    font-family:verdana;
+    background-color: #020202;
+    color:orangered;
+    line-height:2;
+
+
+
+    max-width:2000px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+
+h1{
+    font-size: 90px;
+    border-bottom: 10px dashed cyan;
+}
+h2{
+    font-size: 30px;
+}
+a{
+    color:orangered
+}
+
+video{
+    border: 4px solid cyan;
+    transform:  rotate(-360000000000002deg);
+
+
+}
+
+ul{
+    list-style-type: "💀☠️💀";
+}

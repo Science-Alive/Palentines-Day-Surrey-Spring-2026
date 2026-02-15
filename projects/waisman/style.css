@@ -1,0 +1,13 @@
+body {
+    background-color: chartreuse;
+    color: black;
+}
+
+img {
+    border: 4px black solid;
+}
+
+h1 {
+    max-width:600px
+}
+ul {}

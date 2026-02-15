@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealyBasicCalculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><b>Welcome To My Calculator!</b></h1>
+    <h2>You may use it right now!</h2>
+
+    <div>
+        <a href="https://github.com/">This Is GitHub You Should Be Able To Find My Advanced Calculator By Serching "Kids Calculator"</a>
+    </div>
+
+    <div>
+        <h1 id="numbers"></h1>
+    </div>
+
+    <div>
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="add">+</button>
+        <button id="equal">=</button>
+    </div>
+
+    <div>
+        <button id="delete">ac</button>
+    </div>
+
+    <ul>
+        <li><b>This Calculator Will Be Made And You Could Check The Code In My GitHub Acount</b></li>
+        <li><b>This Calculator Will Have Basic Mode</b></li>
+        <li><b>And AI Imige Solving Mode And Many More</b></li>
+    </ul>
+
+</body>
+</html>
+
+<script>
+    let leftSide = 0
+    let a;
+    let b;
+
+
+    const MyButton1 = document.getElementById("one");
+    MyButton1.addEventListener("click",function() {
+        document.getElementById("numbers").innerText += "1"
+    })
+
+    const MyButton2 = document.getElementById("two");
+    MyButton2.addEventListener("click",function() {
+        document.getElementById("numbers").innerText += "2"
+    })
+
+    const MyButton3 = document.getElementById("three");
+    MyButton3.addEventListener("click",function() {
+        document.getElementById("numbers").innerText += "3"
+    })
+
+    const MyButton4 = document.getElementById("add");
+    MyButton4.addEventListener("click",function() {
+        a = Number(document.getElementById("numbers").innerText);
+        document.getElementById("numbers").innerText += "+"
+    })
+
+    const MyButton5 = document.getElementById("equal");
+    MyButton5.addEventListener("click",function() {
+        // 3+3
+        // 3 + 
+        // Loop through the string
+        // add the numbers until we see a plus or end of string
+        // convert the string of numbers into an int 
+        // if we get a plus we add to our running total
+        // return
+        
+        myString = document.getElementById("numbers").innerText;
+        runningTotal = 0;
+        temp = "";
+        for (const character of myString) {
+            if(character === '+'){
+                tempNum = Number(temp);
+                runningTotal += tempNum;
+                temp = "";
+                tempNum = 0;
+            }
+            else{   
+                temp += character;
+            }
+            tempNum = Number(temp);
+            runningTotal += tempNum;
+            temp = "";
+            tempNum = 0;
+        }
+        document.getElementById("numbers").innerText = "";
+        document.getElementById("numbers").innerText += String(runningTotal);
+    })
+
+    const MyButton6 = document.getElementById("delete");
+    MyButton6.addEventListener("click",function() {
+        document.getElementById("numbers").innerText = ""
+    })
+
+</script>

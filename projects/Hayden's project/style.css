@@ -1,0 +1,24 @@
+body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+background-color: rgb(243, 176, 76);
+color: rgb(114, 49, 6);
+line-height: 1.5; 
+max-width: 600px;
+margin: 50px;
+text-align: left;
+}
+h1{
+    font-size: 3em;
+    border-bottom:4px dashed;
+}
+img{
+border: 8px solid rgba(119, 65, 2, 0.911);
+
+
+
+
+}
+
+ul{
+list-style-type: "❤️";
+}

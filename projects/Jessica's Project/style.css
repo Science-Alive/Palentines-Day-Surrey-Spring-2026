@@ -1,0 +1,25 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    background-color: lemonchiffon;
+    color: rgba(10, 3, 3, 0.705);
+    line-height:1.5;
+    max-width:1000px;
+    
+    
+
+
+
+}
+
+h1{
+    font-size:50px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+border-bottom: 5px plum;
+}
+
+img{
+    border: 4px plum;
+}

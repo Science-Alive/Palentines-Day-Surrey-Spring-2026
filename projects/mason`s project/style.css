@@ -1,0 +1,41 @@
+body{ 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(143, 92, 209, 0.973);
+    color: rgb(226, 223, 43);
+   
+   
+    max-width: 600px;                          
+    margin: 50px auto;
+
+}
+
+h1{
+font-size: 89px;
+border-bottom: 8px dashed;
+}
+img{
+border: 20px solid yellow;
+    transform: rotate(-2deg);
+
+}
+
+ul{
+
+    list-style-type:"😀" ;
+}
+
+
+
+img:hover {
+  animation: spin 1s linear infinite     /* Run animation on hover */
+}
+
+/* Define the keyframes for the rotation animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3600deg);
+  }
+}

@@ -1,0 +1,32 @@
+body{
+    font-family:fantasy ;
+    background-color: red; 
+    color: rgb(5, 5, 5);
+    line-height: 40px;
+
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+
+
+
+
+}
+h1{
+   font-size: 40px;
+   border-bottom: 3px dashed;
+}
+
+img:hover {
+    animation: rotation 1s linear infinite alternate;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(-3600deg);
+    }
+    to {
+        transform: rotate(3600deg);
+    }
+}

@@ -1,0 +1,25 @@
+body {
+font-family:  'Courier New' , Courier, monospace;
+background-color: rgb(255, 207, 215);
+color: rgb(95, 21, 95);
+line-height: 2.9;
+
+max-width: 600px;
+margin: 50px auto;
+text-align:center;
+
+}
+
+h1{
+   font-size: 40px;
+   border-bottom:px dashed;
+}
+
+
+img {
+    border: 8px soild palevioletred;
+    transform: rotate(-2deg);
+}
+ul{
+    list-style-type:"🥞";
+}
