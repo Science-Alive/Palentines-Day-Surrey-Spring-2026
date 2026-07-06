@@ -1,453 +1,402 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pal-entines Day Surrey Showcase</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://cdn-icons-png.flaticon.com/512/833/833472.png"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palentines Party Showcase</title>
     <style>
-      :root {
-        --primary: #ff4d6d;
-        --secondary: #c9184a;
-        --bg-color: #fff0f3;
-      }
+        :root {
+            --primary: #33569B;
+            --secondary: #A6192E;
+            --bg-color: #f4f4f5;
+        }
 
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background: var(--bg-color);
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background: var(--bg-color); 
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+        }
 
-      header {
-        background-color: var(--primary);
-        color: white;
-        padding: 2rem 1rem;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
+        header { 
+            background-color: var(--primary); 
+            color: white; 
+            padding: 2rem 1rem; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
-      .header-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
 
-      .company-logo {
-        max-height: 100px;
-        width: auto;
-        object-fit: contain;
-        background: white;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
+        .company-logo {
+            max-height: 100px; 
+            width: auto;
+            object-fit: contain;
+            background: white; 
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
 
-      h1 {
-        margin: 0;
-        font-size: 2.2rem;
-      }
+        h1 { margin: 0; font-size: 2.2rem; }
 
-      .search-wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 500px;
-        margin-top: 1rem;
-      }
+        .search-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 1rem;
+        }
 
-      #search {
-        width: 100%;
-        padding: 15px 20px;
-        border: none;
-        border-radius: 50px;
-        font-size: 16px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        outline: none;
-        box-sizing: border-box;
-      }
+        #search { 
+            width: 100%; 
+            padding: 15px 20px; 
+            border: none; 
+            border-radius: 50px; 
+            font-size: 16px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            outline: none;
+            box-sizing: border-box; 
+        }
 
-      #search:focus {
-        box-shadow: 0 0 0 4px var(--secondary);
-      }
+        #search:focus { box-shadow: 0 0 0 4px var(--secondary); }
 
-      .mascot-container {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999; /* Extremely high z-index to stay on top */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        pointer-events: none; /* Let clicks pass through the empty space around items */
-      }
+        .mascot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999; /* Extremely high z-index to stay on top */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            pointer-events: none; /* Let clicks pass through the empty space around items */
+        }
 
-      .mascot {
-        width: 120px;
-        height: auto;
-        cursor: pointer;
-        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
-        transition: transform 0.2s ease;
-        pointer-events: auto; /* Re-enable clicks specifically for the image */
-      }
+        .mascot {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+            transition: transform 0.2s ease;
+            pointer-events: auto; /* Re-enable clicks specifically for the image */
+        }
 
-      .mascot:hover {
-        transform: scale(1.05);
-      }
-      .mascot:active {
-        transform: scale(0.95);
-      }
+        .mascot:hover { transform: scale(1.05); }
+        .mascot:active { transform: scale(0.95); }
 
-      .speech-bubble {
-        position: absolute;
-        right: 100%;
-        margin-right: -20px;
-        bottom: 100px;
-        width: 200px;
-        background: white;
-        color: #333;
-        padding: 15px 20px;
-        border-radius: 15px;
-        border-bottom-right-radius: 0;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        margin-bottom: 10px;
-        font-size: 14px;
-        line-height: 1.4;
-        opacity: 0;
-        transition: all 0.3s ease;
-        border: 2px solid var(--primary);
-        pointer-events: none;
-      }
+        .speech-bubble {
+            background: white;
+            color: #333;
+            padding: 15px 20px;
+            border-radius: 15px;
+            border-bottom-right-radius: 0; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+            max-width: 250px;
+            font-size: 14px;
+            line-height: 1.4;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            pointer-events: none;
+        }
 
-      .speech-bubble.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
+        .speech-bubble.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-      .main-content {
-        padding: 2rem;
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        box-sizing: border-box;
-        padding-bottom: 150px;
-      }
+        .main-content {
+            padding: 2rem;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding-bottom: 150px; 
+        }
 
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1.5rem;
-      }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 1.5rem; 
+        }
+        
+        .card { 
+            background: white; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+            transition: all 0.2s ease; 
+            text-decoration: none; 
+            color: inherit; 
+            border-left: 5px solid transparent; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-      .card {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        transition: all 0.2s ease;
-        text-decoration: none;
-        color: inherit;
-        border-left: 5px solid transparent;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--secondary); 
+        }
 
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        border-left: 5px solid var(--secondary);
-      }
-
-      .card h2 {
-        margin: 0;
-        font-size: 1.3rem;
-        text-transform: capitalize;
-        color: #333;
-      }
-      .card .btn {
-        margin-top: 1rem;
-        color: var(--primary);
-        font-weight: bold;
-      }
-      .hidden {
-        display: none;
-      }
+        .card h2 { margin: 0; font-size: 1.3rem; text-transform: capitalize; color: #333; }
+        .card .btn { margin-top: 1rem; color: var(--primary); font-weight: bold; }
+        .hidden { display: none; }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <header>
-      <div class="header-container">
-        <img
-          src="assets/SA_SFU_Logo.png"
-          alt="Logo"
-          class="company-logo"
-          onerror="this.style.display = 'none'"
-        />
-        <h1>Pal-entines Day</h1>
-        <div class="search-wrapper">
-          <input
-            type="text"
-            id="search"
-            placeholder="🔍 Search projects..."
-            onkeyup="filterProjects()"
-          />
+        <div class="header-container">
+            <img src="assets/SA_SFU_Logo.png" alt="Logo" class="company-logo" onerror="this.style.display='none'">
+            <h1>Palentines Party Showcase</h1>
+            <div class="search-wrapper">
+                <input type="text" id="search" placeholder="🔍 Search projects..." onkeyup="filterProjects()">
+            </div>
         </div>
-      </div>
     </header>
 
     <div class="main-content">
-      <div class="grid" id="project-grid">
-        <a href="projects/Aarush's Project/" class="card">
-          <h2>Aarush's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Amir's Project/" class="card">
-          <h2>Amir's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Annie's project/" class="card">
-          <h2>Annie's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Antonio's Project/" class="card">
-          <h2>Antonio's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Arthur's project/" class="card">
-          <h2>Arthur's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Atharv_Project/" class="card">
-          <h2>Atharv_Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Celine's project/" class="card">
-          <h2>Celine's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Charles Project/" class="card">
-          <h2>Charles Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Cillian_Project/" class="card">
-          <h2>Cillian_Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Ethans folder/" class="card">
-          <h2>Ethans folder</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Eva's Project/" class="card">
-          <h2>Eva's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Gunner's project/" class="card">
-          <h2>Gunner's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Hailey's project/" class="card">
-          <h2>Hailey's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Hayden's project/" class="card">
-          <h2>Hayden's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Iris' Folder/" class="card">
-          <h2>Iris' Folder</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Jace's Project/" class="card">
-          <h2>Jace's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Jesiah's project/" class="card">
-          <h2>Jesiah's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Jessica's Project/" class="card">
-          <h2>Jessica's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Jessie's Project/" class="card">
-          <h2>Jessie's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Kaylee's Project/" class="card">
-          <h2>Kaylee's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Kelvin's project/" class="card">
-          <h2>Kelvin's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Krisha's project/" class="card">
-          <h2>Krisha's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Mariella's Project/" class="card">
-          <h2>Mariella's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Max's Project/" class="card">
-          <h2>Max's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Nithi/" class="card">
-          <h2>Nithi</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Oliver's Project/" class="card">
-          <h2>Oliver's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Ritwik's project/" class="card">
-          <h2>Ritwik's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Ryan's Project/" class="card">
-          <h2>Ryan's Project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Tayson's project/" class="card">
-          <h2>Tayson's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/Zachary's project/" class="card">
-          <h2>Zachary's project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/justins project/" class="card">
-          <h2>justins project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/kellans projet 0o0/" class="card">
-          <h2>kellans projet 0o0</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/mason`s project/" class="card">
-          <h2>mason`s project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/waisman/" class="card">
-          <h2>waisman</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-
-        <a href="projects/woojin sibal gasagi project/" class="card">
-          <h2>woojin sibal gasagi project</h2>
-          <span class="btn">View Project &rarr;</span>
-        </a>
-      </div>
+        <div class="grid" id="project-grid">
+            
+            <a href="projects/Aarush's Project/" class="card">
+                <h2>Aarush's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Amir's Project/" class="card">
+                <h2>Amir's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Annie's project/" class="card">
+                <h2>Annie's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Antonio's Project/" class="card">
+                <h2>Antonio's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Arthur's project/" class="card">
+                <h2>Arthur's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Atharv_Project/" class="card">
+                <h2>Atharv_Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Celine's project/" class="card">
+                <h2>Celine's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Charles Project/" class="card">
+                <h2>Charles Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Cillian_Project/" class="card">
+                <h2>Cillian_Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Ethans folder/" class="card">
+                <h2>Ethans folder</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Eva's Project/" class="card">
+                <h2>Eva's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Gunner's project/" class="card">
+                <h2>Gunner's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Hailey's project/" class="card">
+                <h2>Hailey's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Hayden's project/" class="card">
+                <h2>Hayden's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Iris' Folder/" class="card">
+                <h2>Iris' Folder</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Jace's Project/" class="card">
+                <h2>Jace's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Jesiah's project/" class="card">
+                <h2>Jesiah's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Jessica's Project/" class="card">
+                <h2>Jessica's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Jessie's Project/" class="card">
+                <h2>Jessie's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Kaylee's Project/" class="card">
+                <h2>Kaylee's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Kelvin's project/" class="card">
+                <h2>Kelvin's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Krisha's project/" class="card">
+                <h2>Krisha's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Mariella's Project/" class="card">
+                <h2>Mariella's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Max's Project/" class="card">
+                <h2>Max's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Nithi/" class="card">
+                <h2>Nithi</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Oliver's Project/" class="card">
+                <h2>Oliver's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Ritwik's project/" class="card">
+                <h2>Ritwik's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Ryan's Project/" class="card">
+                <h2>Ryan's Project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Tayson's project/" class="card">
+                <h2>Tayson's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/Zachary's project/" class="card">
+                <h2>Zachary's project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/justins project/" class="card">
+                <h2>justins project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/kellans projet 0o0/" class="card">
+                <h2>kellans projet 0o0</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/mason`s project/" class="card">
+                <h2>mason`s project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/waisman/" class="card">
+                <h2>waisman</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+            <a href="projects/woojin sibal gasagi project/" class="card">
+                <h2>woojin sibal gasagi project</h2>
+                <span class="btn">View Project &rarr;</span>
+            </a>
+            
+        </div>
     </div>
 
     <div class="mascot-container">
-      <div id="bubble" class="speech-bubble">
-        Here's a showcase of everyone's website who attended Science AL!VE's
-        Pal-entines Day Event!
-      </div>
-      <!-- ADDED ID 'mascot-img' AND REMOVED ONCLICK -->
-      <img
-        id="mascot-img"
-        src="assets/Wattson.svg"
-        alt="Mascot"
-        class="mascot"
-        onerror="
-          console.error('Mascot failed to load');
-          this.style.display = 'none';
-        "
-      />
+        <div id="bubble" class="speech-bubble">
+            Here's a showcase of everyone's website who attended Science AL!VE's Palentines Party!
+        </div>
+        <!-- ADDED ID 'mascot-img' AND REMOVED ONCLICK -->
+        <img id="mascot-img" src="assets/Wattson.svg" alt="Mascot" class="mascot" onerror="console.error('Mascot failed to load'); this.style.display='none'">
     </div>
 
     <script>
-      console.log("✅ System Check: Script Loaded");
+        console.log("✅ System Check: Script Loaded");
 
-      // Wait for HTML to be fully ready
-      document.addEventListener("DOMContentLoaded", function () {
-        // 1. Setup Mascot Click Listener
-        const mascotImg = document.getElementById("mascot-img");
-        if (mascotImg) {
-          console.log("✅ Mascot image found in DOM");
-          mascotImg.addEventListener("mouseenter", toggleMessage);
-        } else {
-          console.error("❌ Mascot image NOT found (Check IDs)");
+        // Wait for HTML to be fully ready
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Setup Mascot Click Listener
+            const mascotImg = document.getElementById('mascot-img');
+            if(mascotImg) {
+                console.log("✅ Mascot image found in DOM");
+                mascotImg.addEventListener('click', toggleMessage);
+            } else {
+                console.error("❌ Mascot image NOT found (Check IDs)");
+            }
+
+            // 2. Setup Search Filter
+            const searchInput = document.getElementById('search');
+            if(searchInput) {
+                searchInput.addEventListener('keyup', filterProjects);
+            }
+        });
+
+        function filterProjects() {
+            const input = document.getElementById('search');
+            const filter = input.value.toLowerCase();
+            const cards = document.getElementsByClassName('card');
+            for (let i = 0; i < cards.length; i++) {
+                const txtValue = cards[i].querySelector('h2').textContent || cards[i].querySelector('h2').innerText;
+                cards[i].classList.toggle('hidden', txtValue.toLowerCase().indexOf(filter) === -1);
+            }
         }
 
-        // 2. Setup Search Filter
-        const searchInput = document.getElementById("search");
-        if (searchInput) {
-          searchInput.addEventListener("keyup", filterProjects);
+        function toggleMessage() {
+            const bubble = document.getElementById('bubble');
+            bubble.classList.toggle('visible');
+            
+            if (bubble.classList.contains('visible')) {
+                setTimeout(() => { bubble.classList.remove('visible'); }, 5000);
+            }
         }
-      });
-
-      function filterProjects() {
-        const input = document.getElementById("search");
-        const filter = input.value.toLowerCase();
-        const cards = document.getElementsByClassName("card");
-        for (let i = 0; i < cards.length; i++) {
-          const txtValue =
-            cards[i].querySelector("h2").textContent ||
-            cards[i].querySelector("h2").innerText;
-          cards[i].classList.toggle(
-            "hidden",
-            txtValue.toLowerCase().indexOf(filter) === -1,
-          );
-        }
-      }
-
-      function toggleMessage() {
-        const bubble = document.getElementById("bubble");
-        bubble.classList.toggle("visible");
-
-        if (bubble.classList.contains("visible")) {
-          setTimeout(() => {
-            bubble.classList.remove("visible");
-          }, 5000);
-        }
-      }
     </script>
-  </body>
+</body>
 </html>

@@ -4,8 +4,8 @@ const path = require('path');
 // --- CONFIGURATION ---
 const logoFilename = 'assets/SA_SFU_Logo.png';     
 const mascotFilename = 'assets/Wattson.svg'; 
-const pageTitle = "Tis the Season to Code Surrey Showcase";
-const mascotMessage = "Here's a showcase of everyone's website who attended Science AL!VE's Holiday Makers Lab!";
+const pageTitle = "Palentines Party Showcase";
+const mascotMessage = "Here's a showcase of everyone's website who attended Science AL!VE's Palentines Party!";
 const targetFolder = 'projects'; 
 const projectsPath = path.join(__dirname, targetFolder);
 // ---------------------
